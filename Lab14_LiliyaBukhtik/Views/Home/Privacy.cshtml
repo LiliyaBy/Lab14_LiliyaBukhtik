@@ -1,0 +1,31 @@
+﻿@model RegistrationForm
+
+<div class="text-left">
+    <h1 class ="display-4">Register</h1>
+    <p>Please fill in this form to create an account.</p>
+       
+</div>
+<div class="FormReg">
+    <form action="/Home/Registr" method="post">
+             
+        <label asp-for="name"><b>Name</b></label>
+        <input type="text" asp-for="name"/>        
+            
+        <label asp-for="gender"><b>Gender</b></label>
+        <select asp-for="gender" asp-items="Html.GetEnumSelectList<Gender>()"></select>
+                
+        <label asp-for="age"><b>Age</b></label>
+        <input type="text" asp-for="age" />
+
+        <label asp-for="email"><b>Email</b></label>
+        <input type="email" asp-for="email" />
+
+        <label asp-for="password"><b>Password</b></label>
+        <input type="password" asp-for="password" />
+
+        <input type="submit" value="Save" />
+       
+      
+        
+    </form>
+</div>
